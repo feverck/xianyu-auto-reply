@@ -4,12 +4,13 @@ services:
     name: xianyu-auto-reply
     env: container
     dockerImage: registry.cn-shanghai.aliyuncs.com/zhinian-software/xianyu-auto-reply:latest
+    region: singapore
     port: 8080
-    healthCheckPath: /
-    disks:
-      - name: xianyu-data
-        mountPath: /app/data
-        sizeGB: 1
+    plan: free
+    disk:
+      name: xianyu-data
+      mountPath: /app/data
+      sizeGB: 1
     envVars:
       - key: TZ
         value: Asia/Shanghai
