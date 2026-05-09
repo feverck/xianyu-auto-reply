@@ -1,12 +1,8 @@
-# render.yaml - 闲鱼自动回复系统 Render 部署配置
+name: xianyu-auto-reply
 services:
-  - type: web
-    name: xianyu-auto-reply
+  - name: web
+    type: web
     env: container
     dockerImage: registry.cn-shanghai.aliyuncs.com/zhinian-software/xianyu-auto-reply:latest
     region: singapore
     port: 8080
-    plan: free
-    envVars:
-      - key: TZ
-        value: Asia/Shanghai
