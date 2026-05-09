@@ -1,16 +1,11 @@
 # render.yaml - 闲鱼自动回复系统 Render 部署配置
-
 services:
   - type: web
     name: xianyu-auto-reply
     env: container
-    region: singapore
     dockerImage: registry.cn-shanghai.aliyuncs.com/zhinian-software/xianyu-auto-reply:latest
     port: 8080
     healthCheckPath: /
-    initialDeployHook: |
-      # 等待服务启动
-      sleep 15
     disks:
       - name: xianyu-data
         mountPath: /app/data
